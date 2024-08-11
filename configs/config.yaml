@@ -1,0 +1,23 @@
+data:
+  file_path: 'xnas-itch-20230703.tbbo.csv'    # Dataset path
+  target_column: 'RSI'                        # Target Column for prediction
+  test_size: 0.2                              # Size of test dataset - 20%
+  validation_split: 0.2                       # Validation dataset size - 20%
+  random_state: 42
+
+model:
+  lstm_units_1: 128                           # Units for the first LSTM layer
+  lstm_units_2: 64                            # Units for the second LSTM layer
+  dense_units: 32                             # Units for the dense layer
+  num_classes: 3                              # Number of output classes (Buy, Hold, Sell)
+  dropout_rate: 0.1                           # Dropout rate for regularization
+
+training:
+  epochs: 50
+  batch_size: 64
+  patience: 5                                 # Patience for early stopping
+  reduce_lr_factor: 0.2                       # Factor to reduce learning rate
+  reduce_lr_patience: 3                       # Patience before reducing learning rate
+  learning_rate: 0.001                        # Initial reducing learning rate
+  min_lr: 0.0001                              # Minimum learning rate after reduction
+  output_dir: 'output/'                       # Directory to save the model
