@@ -6,7 +6,7 @@ LSTM based model for trading AAPL vs Traditional Trading AAPL
 Trade_Recommendation/
 │
 ├── models/
-│   ├── LSTM_model.py             # Implementation of the transformer model
+│   ├── LSTM_model.py             # Implementation of the LSTM model
 │
 ├── helpers/
 │   ├── feature_engineering.py    # Feature engineering and data transformation scripts
