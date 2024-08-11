@@ -1,14 +1,12 @@
 # Trade_Recommendation
-Transformer based model for trading AAPL vs Traditional Trading
+LSTM based model for trading AAPL vs Traditional Trading AAPL
 
 # Project Structure
 ```
-trade_recommendation/
+Trade_Recommendation/
 │
 ├── models/
-│   ├── transformer_model.py      # Implementation of the transformer model
-│   ├── fine_tuning.py            # Script for fine-tuning the model
-│   └── evaluation.py             # Script for evaluating the model's performance
+│   ├── LSTM_model.py             # Implementation of the transformer model
 │
 ├── helpers/
 │   ├── feature_engineering.py    # Feature engineering and data transformation scripts
@@ -17,14 +15,14 @@ trade_recommendation/
 ├── scripts/
 │   ├── train.py                  # Script to train and fine-tune the model
 │   ├── evaluate.py               # Script to evaluate the model and compare with traditional strategy
-│   └── backtest.py               # Script for backtesting the trading strategy
 │
 ├── configs/
 │   └── config.yaml               # Configuration file for hyperparameters and paths
 │
 ├── feature_transformation.py     # Script for transforming features and preprocessing data
-├── traditional_trade.py          # Script for traditional trading environment simulation
+├── traditional_trade.py          # Script for simulating the Trading Blotter environement
+├── blotter_ground.py             # Script to check how accurate is the Trading Blotter Signals vs. Ground Truth Signals.
 ├── main.py                       # Main entry point script to run the full process
 ├── README.md                     # Project overview and instructions
-└── requirements.txt              # Python dependencies
+└── requirements.txt              # Project dependencies
 ```
