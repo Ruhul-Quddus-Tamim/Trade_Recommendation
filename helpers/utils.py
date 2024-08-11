@@ -14,7 +14,7 @@ def preprocess_data_for_trading(market_features_df, config):
     market_features_df['Target'] = market_features_df[config['data']['target_column']].apply(determine_target)
 
     # Drop non-relevant or non-numeric columns (adjust as necessary)
-    X = market_features_df.drop(columns=['Target', 'ts_recv', 'ts_event', 'action', 'side'])
+    X = market_features_df.drop(columns=['Target', 'ts_recv', 'ts_event', 'action', 'side', 'RSI'])
     y = market_features_df['Target']
 
     # Encode the target variable
